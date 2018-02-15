@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6BD6C8CC2035EDAF00A190EF /* AmazonStuff.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD6C8CA2035EDAF00A190EF /* AmazonStuff.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BD6C8D52035F47500A190EF /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD6C8D42035F47400A190EF /* AWSS3.framework */; };
+		6BD6C8DA2035F47F00A190EF /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD6C8D62035F47F00A190EF /* AWSCognito.framework */; };
+		6BD6C8DB2035F47F00A190EF /* AWSCognitoIdentityProviderASF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD6C8D72035F47F00A190EF /* AWSCognitoIdentityProviderASF.framework */; };
+		6BD6C8DC2035F47F00A190EF /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD6C8D82035F47F00A190EF /* AWSCore.framework */; };
+		6BD6C8DD2035F47F00A190EF /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD6C8D92035F47F00A190EF /* AWSCognitoIdentityProvider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6BD6C8C72035EDAF00A190EF /* AmazonStuff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazonStuff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD6C8CA2035EDAF00A190EF /* AmazonStuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazonStuff.h; sourceTree = "<group>"; };
 		6BD6C8CB2035EDAF00A190EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD6C8D42035F47400A190EF /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = Carthage/Build/iOS/AWSS3.framework; sourceTree = "<group>"; };
+		6BD6C8D62035F47F00A190EF /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognito.framework; path = Carthage/Build/iOS/AWSCognito.framework; sourceTree = "<group>"; };
+		6BD6C8D72035F47F00A190EF /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProviderASF.framework; path = Carthage/Build/iOS/AWSCognitoIdentityProviderASF.framework; sourceTree = "<group>"; };
+		6BD6C8D82035F47F00A190EF /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = Carthage/Build/iOS/AWSCore.framework; sourceTree = "<group>"; };
+		6BD6C8D92035F47F00A190EF /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = Carthage/Build/iOS/AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +31,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD6C8D52035F47500A190EF /* AWSS3.framework in Frameworks */,
+				6BD6C8DA2035F47F00A190EF /* AWSCognito.framework in Frameworks */,
+				6BD6C8DB2035F47F00A190EF /* AWSCognitoIdentityProviderASF.framework in Frameworks */,
+				6BD6C8DC2035F47F00A190EF /* AWSCore.framework in Frameworks */,
+				6BD6C8DD2035F47F00A190EF /* AWSCognitoIdentityProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +47,7 @@
 			children = (
 				6BD6C8C92035EDAF00A190EF /* AmazonStuff */,
 				6BD6C8C82035EDAF00A190EF /* Products */,
+				6BD6C8D32035F47400A190EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +66,18 @@
 				6BD6C8CB2035EDAF00A190EF /* Info.plist */,
 			);
 			path = AmazonStuff;
+			sourceTree = "<group>";
+		};
+		6BD6C8D32035F47400A190EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BD6C8D62035F47F00A190EF /* AWSCognito.framework */,
+				6BD6C8D92035F47F00A190EF /* AWSCognitoIdentityProvider.framework */,
+				6BD6C8D72035F47F00A190EF /* AWSCognitoIdentityProviderASF.framework */,
+				6BD6C8D82035F47F00A190EF /* AWSCore.framework */,
+				6BD6C8D42035F47400A190EF /* AWSS3.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +287,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AmazonStuff/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-objC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samplecode.AmazonStuff;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -279,9 +315,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AmazonStuff/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-objC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samplecode.AmazonStuff;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
