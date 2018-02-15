@@ -1,0 +1,1 @@
+To demonstrate the bug, run `./carthage-static.sh --platform iOS` to build the frameworks, then open the Xcode project and try to build.
